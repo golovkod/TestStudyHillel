@@ -2,29 +2,30 @@
 
 namespace App\Http\Controllers;
 
-use App\Repository\Messege;
-use App\Repository\MessegeStrategy;
+use App\Repository\Message;
+use App\Repository\MessageStrategy;
 use App\Repository\StarOnCommand;
 
 class MessageController extends Controller
 {
     public function indexCommandPattern()
     {
-        $messege = new Messege('Command Pattern TEST ');
-        echo ($messege->getMessege());
-        $starsOn = new StarOnCommand($messege);
+        $message = new Message('Command Pattern TEST ');
+        echo ($message->getMessage());
+        $starsOn = new StarOnCommand($message);
         $starsOn->execute();
-        echo ($messege->getMessege());
+        echo ($message->getMessage());
     }
 
     public function indexStrategyPattern()
     {
-        $messege = new Messege('Strategy Pattern TEST ');
-        $strategyContextC = new MessegeStrategy('C');
-        $strategyContextE = new MessegeStrategy('E');
+        $message = new Message('Strategy Pattern TEST ');
+        $strategyContext = new MessageStrategy();
+        $strategyContextC = $strategyContext->selectStrategy('C');
+        $strategyContextE = $strategyContext->selectStrategy('E');
         echo "C Strategy use - ";
-        echo $strategyContextC->showContext($messege);
+        echo $strategyContextC->showMessage($message);
         echo "E Strategy use - ";
-        echo $strategyContextE->showContext($messege);
+        echo $strategyContextE->showMessage($message);
     }
 }

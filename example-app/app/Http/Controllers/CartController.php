@@ -9,12 +9,15 @@ class CartController extends Controller
 {
     public function index()
     {
+        $amounts = [10,15,20];
         $cart = new Cart;
-        $cart->addPurchase(new Purchare(10));
-        $cart->addPurchase(new Purchare(15));
+        foreach ($amounts as $value) {
+            $cart->addPurchase(new Purchare($value));
+        }
+
         var_dump($cart->getCost());
-        foreach ($cart as $purchase)
-        {
+
+        foreach ($cart as $purchase) {
             var_dump($purchase->getCost());
         }
     }

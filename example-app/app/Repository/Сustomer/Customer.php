@@ -16,4 +16,5 @@ class Customer implements SplObserver
     {
         echo $this->name.' FAST BUY IT, new price is -  <b>'.$subject->getCost().'</b><br>';
     }
+
 }

@@ -9,14 +9,18 @@ class PurchareController extends Controller
 {
     public function index()
     {
+        $names = ['leha','daniil','valera'];
         $purchase = new Purchare(250);
-        $leha = new Customer('Leha');
-        $daniil = new Customer('Daniil');
-        $valera = new Customer('Valera');
-        $purchase->attach($leha);
-        $purchase->attach($daniil);
-        $purchase->attach($valera);
-        $purchase->detach($valera);
+
+        foreach ($names as $value) {
+            $users[] = new Customer($value);
+        }
+
+        foreach ($users as $value) {
+            $purchase->attach($value);
+        }
+
+        $purchase->detach($users[2]);
         $purchase->breakOutPrice(100);
     }
 }

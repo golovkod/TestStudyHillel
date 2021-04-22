@@ -1,7 +1,7 @@
 <?php
 namespace App\Repository;
 
-interface IMessege
+interface IMessage
 {
     public function execute();
 }
