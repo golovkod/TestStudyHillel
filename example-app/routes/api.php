@@ -1,9 +1,8 @@
 <?php
 
-use App\Http\Controllers\ContragentsController;
-use App\Http\Controllers\OrderController;
-use App\Http\Controllers\PaymentController;
-use Illuminate\Http\Request;
+use App\Http\Controllers\CartController;
+use App\Http\Controllers\MessageController;
+use App\Http\Controllers\PurchareController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,18 +16,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::prefix('contragents')->group(function () {
-    Route::get('/find-duplicate', [ContragentsController::class, 'findDuplicate']);
+Route::prefix('cart')->group(function () {
+    Route::get('/cart-index', [CartController::class, 'index']);
 });
 
-Route::prefix('payment')->group(function () {
-    Route::get('/paid', [PaymentController::class, 'paid']);
+Route::prefix('messege')->group(function () {
+    Route::get('/messege-index-command', [MessageController::class, 'indexCommandPattern']);
 });
 
-Route::prefix('order')->group(function () {
-    Route::get('/sum-all-orders', [OrderController::class, 'sumOfAllOrders']);
+Route::prefix('messege')->group(function () {
+    Route::get('/messege-index-strategy', [MessageController::class, 'indexStrategyPattern']);
 });
 
-Route::prefix('order')->group(function () {
-    Route::get('/findbycontragent', [OrderController::class, 'findOrderByContragent']);
+Route::prefix('purchase')->group(function () {
+    Route::get('/purchase-index', [PurchareController::class, 'index']);
 });
+
