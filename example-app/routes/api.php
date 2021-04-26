@@ -3,6 +3,7 @@
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\PurchareController;
+use App\Http\Controllers\WeatherController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,3 +33,6 @@ Route::prefix('purchase')->group(function () {
     Route::get('/purchase-index', [PurchareController::class, 'index']);
 });
 
+Route::prefix('weather')->group(function () {
+    Route::get('/weather-index', [WeatherController::class, 'index']);
+});
