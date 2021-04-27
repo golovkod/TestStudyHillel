@@ -5,11 +5,17 @@ use Illuminate\Support\Facades\Http;
 
 class WeatherInfo
 {
+    protected $apiKey;
 
-    public static function getTempByCity($stringIn)
+    public function __construct()
     {
-        $api_key = config('services.weather.api_key');
-        return Http::get("http://api.openweathermap.org/data/2.5/weather?q={$stringIn}&appid={$api_key}")['main'];
+        $this->apiKey = config('services.weather.api_key');
+    }
+
+    public function getTempByCity($stringIn)
+    {
+
+        return Http::get("http://api.openweathermap.org/data/2.5/weather?q={$stringIn}&appid={$this->api_key}")['main'];
     }
 
 
