@@ -4,7 +4,7 @@ namespace App\Repository;
 
 class WeatherFacade
 {
-    public static function getWeatherbyCity($city) {
+    public static function getWeatherByCity($city) {
         $temp = WeatherInfo::getTempByCity($city);
         return $temp;
     }

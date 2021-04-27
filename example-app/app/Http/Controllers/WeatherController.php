@@ -10,7 +10,7 @@ class WeatherController extends Controller
 {
    public function index()
    {
-    $weatherByCity = WeatherFacade::getWeatherbyCity('Kyiv');
+    $weatherByCity = WeatherFacade::getWeatherByCity('Kyiv');
     dd($weatherByCity);
    }
 }
