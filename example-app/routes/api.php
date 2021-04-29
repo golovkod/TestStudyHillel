@@ -5,6 +5,7 @@ use App\Http\Controllers\CartController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\PurchareController;
 use App\Http\Controllers\WeatherController;
+use App\Http\Controllers\AdapterController;
 use Illuminate\Support\Facades\Route;
 
 /*
