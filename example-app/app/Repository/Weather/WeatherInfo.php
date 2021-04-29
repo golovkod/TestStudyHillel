@@ -15,7 +15,7 @@ class WeatherInfo
     public function getTempByCity($stringIn)
     {
 
-        return Http::get("http://api.openweathermap.org/data/2.5/weather?q={$stringIn}&appid={$this->api_key}")['main'];
+        return Http::get("http://api.openweathermap.org/data/2.5/weather?q={$stringIn}&appid={$this->apiKey}")['main'];
     }
 
 
