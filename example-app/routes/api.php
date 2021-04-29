@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdapterController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\PurchareController;
@@ -35,4 +36,8 @@ Route::prefix('purchase')->group(function () {
 
 Route::prefix('weather')->group(function () {
     Route::get('/weather-index', [WeatherController::class, 'index']);
+});
+
+Route::prefix('adapter')->group(function () {
+    Route::get('/adapter-index', [AdapterController::class, 'index']);
 });
