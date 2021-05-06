@@ -1,0 +1,220 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "TEAT API",
+        "description": "Description of API",
+        "contact": {
+            "email": "test@gmail.com"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/contragents/find-duplicate": {
+            "get": {
+                "tags": [
+                    "Contragents"
+                ],
+                "summary": "Get duplicate contragents",
+                "description": "Description of API",
+                "operationId": "App\\Http\\Controllers\\ContragentsController::findDuplicate",
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "properties": {
+                                                    "id": {
+                                                        "type": "integer",
+                                                        "example": 5
+                                                    },
+                                                    "id_contragents": {
+                                                        "type": "integer",
+                                                        "example": 321
+                                                    },
+                                                    "name_contragents": {
+                                                        "type": "string",
+                                                        "example": "DNS"
+                                                    },
+                                                    "data_update": {
+                                                        "type": "string",
+                                                        "example": "2021-03-28 20:54:00"
+                                                    }
+                                                },
+                                                "type": "object",
+                                                "format": "query"
+                                            }
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/order/sum-all-orders": {
+            "get": {
+                "tags": [
+                    "Order"
+                ],
+                "summary": "Get sum of all orders",
+                "description": "Description of API",
+                "operationId": "App\\Http\\Controllers\\OrderController::sumOfAllOrders",
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "properties": {
+                                                    "id": {
+                                                        "type": "integer",
+                                                        "example": 4
+                                                    },
+                                                    "name_contragents": {
+                                                        "type": "string",
+                                                        "example": "test"
+                                                    },
+                                                    "allsum": {
+                                                        "type": "integer",
+                                                        "example": 600
+                                                    }
+                                                },
+                                                "type": "object",
+                                                "format": "query"
+                                            }
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/order/findbycontragent": {
+            "get": {
+                "tags": [
+                    "Order"
+                ],
+                "summary": "Get order by contragent",
+                "description": "Display a listing of the resource.",
+                "operationId": "App\\Http\\Controllers\\OrderController::findOrderByContragent",
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "properties": {
+                                                    "id": {
+                                                        "type": "integer",
+                                                        "example": 2
+                                                    },
+                                                    "id_orders": {
+                                                        "type": "integer",
+                                                        "example": 444
+                                                    },
+                                                    "id_goods": {
+                                                        "type": "integer",
+                                                        "example": 311
+                                                    },
+                                                    "quantity": {
+                                                        "type": "integer",
+                                                        "example": 2
+                                                    },
+                                                    "data_update": {
+                                                        "type": "string",
+                                                        "example": "2021-03-28 20:54:00"
+                                                    },
+                                                    "name": {
+                                                        "type": "string",
+                                                        "example": "keyboard"
+                                                    },
+                                                    "price": {
+                                                        "type": "integer",
+                                                        "example": 250
+                                                    }
+                                                },
+                                                "type": "object",
+                                                "format": "query"
+                                            }
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/order/paid": {
+            "get": {
+                "tags": [
+                    "Paid"
+                ],
+                "summary": "Get paid",
+                "description": "Description of API",
+                "operationId": "App\\Http\\Controllers\\PaymentController::paid",
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "properties": {
+                                                    "id": {
+                                                        "type": "integer",
+                                                        "example": 1
+                                                    },
+                                                    "status_payment": {
+                                                        "type": "integer",
+                                                        "example": 1
+                                                    },
+                                                    "data_update": {
+                                                        "type": "string",
+                                                        "example": "2021-03-28 20:54:00"
+                                                    }
+                                                },
+                                                "type": "object",
+                                                "format": "query"
+                                            }
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "security": [
+        []
+    ]
+}
