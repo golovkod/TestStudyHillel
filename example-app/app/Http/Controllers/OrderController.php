@@ -40,6 +40,7 @@ class OrderController extends Controller
                            WHERE Orders.id_goods = Goods.id_goods AND Contragents.id_contragents = Orders.id_contragents
                            GROUP BY Orders.id_contragents');
     }
+
     /**
      * @OA\Get(
      *     path="/api/order/findbycontragent",
