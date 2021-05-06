@@ -1,11 +1,13 @@
 <?php
 
-use App\Http\Controllers\AdapterController;
+use App\Http\Controllers\AdaptersController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\ContragentsController;
 use App\Http\Controllers\MessageController;
+use App\Http\Controllers\OrderController;
+use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\PurchareController;
 use App\Http\Controllers\WeatherController;
-use App\Http\Controllers\AdapterController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -40,5 +42,21 @@ Route::prefix('weather')->group(function () {
 });
 
 Route::prefix('adapter')->group(function () {
-    Route::get('/adapter-index', [AdapterController::class, 'index']);
+    Route::get('/adapter-index', [AdaptersController::class, 'index']);
+});
+
+Route::prefix('contragents')->group(function () {
+    Route::get('/find-duplicate', [ContragentsController::class, 'findDuplicate']);
+});
+
+Route::prefix('payment')->group(function () {
+    Route::get('/paid', [PaymentController::class, 'paid']);
+});
+
+Route::prefix('order')->group(function () {
+    Route::get('/sum-all-orders', [OrderController::class, 'sumOfAllOrders']);
+});
+
+Route::prefix('order')->group(function () {
+    Route::get('/findbycontragent', [OrderController::class, 'findOrderByContragent']);
 });

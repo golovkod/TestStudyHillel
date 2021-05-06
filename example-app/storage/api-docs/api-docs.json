@@ -1,0 +1,149 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "TEAT API",
+        "description": "Description of API ",
+        "contact": {
+            "email": "test@gmail.com"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/contragents/find-duplicate": {
+            "get": {
+                "tags": [
+                    "Contragents"
+                ],
+                "summary": "Get duplicate contragents",
+                "description": "Display a listing of the resource.",
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                },
+                                "example": {
+                                    "data": [
+                                        {
+                                            "id": 5,
+                                            "id_contragents": 321,
+                                            "name_contragents": "DNS",
+                                            "data_update": "2021-03-28 20:54:00"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/order/sum-all-orders": {
+            "get": {
+                "tags": [
+                    "Order"
+                ],
+                "summary": "Get sum of all orders",
+                "description": "Display a listing of the resource.",
+                "operationId": "App\\Http\\Controllers\\OrderController::sumOfAllOrders",
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                },
+                                "example": {
+                                    "data": [
+                                        {
+                                            "id": 4,
+                                            "name_contragents": "TEST",
+                                            "allsum": 600
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/order/findbycontragent": {
+            "get": {
+                "tags": [
+                    "Order"
+                ],
+                "summary": "Get order by contragent",
+                "description": "Display a listing of the resource.",
+                "operationId": "App\\Http\\Controllers\\OrderController::findOrderByContragent",
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                },
+                                "example": {
+                                    "data": [
+                                        {
+                                            "id": 4,
+                                            "id_orders": 444,
+                                            "id_goods": 431,
+                                            "quantity": 2,
+                                            "id_contragents": 123,
+                                            "data_update": "2021-03-28 20:54:21",
+                                            "name": "keyboard",
+                                            "price": 300
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/order/paid": {
+            "get": {
+                "tags": [
+                    "Paid"
+                ],
+                "summary": "Get paid",
+                "description": "Display a listing of the resource.",
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                },
+                                "example": {
+                                    "data": [
+                                        {
+                                            "id": 1,
+                                            "id_orders": 978,
+                                            "status_payment": 1,
+                                            "data_update": "2021-03-28 20:55:24"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "security": [
+        []
+    ]
+}

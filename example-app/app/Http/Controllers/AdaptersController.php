@@ -7,7 +7,8 @@ use App\Repository\DataAdapter;
 use App\Repository\FileHandler;
 use Illuminate\Http\Request;
 
-class AdapterController extends Controller
+
+class AdaptersController extends Controller
 {
     public function index()
     {
