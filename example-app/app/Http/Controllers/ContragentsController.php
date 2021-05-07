@@ -21,7 +21,7 @@ class ContragentsController extends Controller
      *        description="Successful response",
      *        @OA\MediaType(
      *              mediaType="application/json",
-     *           @OA\Items(
+     *           @OA\Schema(
      *               type="object",
      *               @OA\Property(property="id", type="integer", example=5),
      *               @OA\Property(property="id_contragents", type="integer", example=321),

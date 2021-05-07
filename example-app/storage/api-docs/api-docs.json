@@ -25,7 +25,29 @@
                     "200": {
                         "description": "Successful response",
                         "content": {
-                            "application/json": {}
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "id": {
+                                            "type": "integer",
+                                            "example": 5
+                                        },
+                                        "id_contragents": {
+                                            "type": "integer",
+                                            "example": 321
+                                        },
+                                        "name_contragents": {
+                                            "type": "string",
+                                            "example": "DNS"
+                                        },
+                                        "data_update": {
+                                            "type": "string",
+                                            "example": "2021-03-28 20:54:00"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
                         }
                     }
                 }
