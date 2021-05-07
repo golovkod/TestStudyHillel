@@ -25,38 +25,7 @@
                     "200": {
                         "description": "Successful response",
                         "content": {
-                            "application/json": {
-                                "schema": {
-                                    "properties": {
-                                        "data": {
-                                            "type": "array",
-                                            "items": {
-                                                "properties": {
-                                                    "id": {
-                                                        "type": "integer",
-                                                        "example": 5
-                                                    },
-                                                    "id_contragents": {
-                                                        "type": "integer",
-                                                        "example": 321
-                                                    },
-                                                    "name_contragents": {
-                                                        "type": "string",
-                                                        "example": "DNS"
-                                                    },
-                                                    "data_update": {
-                                                        "type": "string",
-                                                        "example": "2021-03-28 20:54:00"
-                                                    }
-                                                },
-                                                "type": "object",
-                                                "format": "query"
-                                            }
-                                        }
-                                    },
-                                    "type": "object"
-                                }
-                            }
+                            "application/json": {}
                         }
                     }
                 }
@@ -77,26 +46,17 @@
                             "application/json": {
                                 "schema": {
                                     "properties": {
-                                        "data": {
-                                            "type": "array",
-                                            "items": {
-                                                "properties": {
-                                                    "id": {
-                                                        "type": "integer",
-                                                        "example": 4
-                                                    },
-                                                    "name_contragents": {
-                                                        "type": "string",
-                                                        "example": "test"
-                                                    },
-                                                    "allsum": {
-                                                        "type": "integer",
-                                                        "example": 600
-                                                    }
-                                                },
-                                                "type": "object",
-                                                "format": "query"
-                                            }
+                                        "id": {
+                                            "type": "integer",
+                                            "example": 4
+                                        },
+                                        "name_contragents": {
+                                            "type": "string",
+                                            "example": "test"
+                                        },
+                                        "allsum": {
+                                            "type": "integer",
+                                            "example": 600
                                         }
                                     },
                                     "type": "object"
@@ -122,42 +82,33 @@
                             "application/json": {
                                 "schema": {
                                     "properties": {
-                                        "data": {
-                                            "type": "array",
-                                            "items": {
-                                                "properties": {
-                                                    "id": {
-                                                        "type": "integer",
-                                                        "example": 2
-                                                    },
-                                                    "id_orders": {
-                                                        "type": "integer",
-                                                        "example": 444
-                                                    },
-                                                    "id_goods": {
-                                                        "type": "integer",
-                                                        "example": 311
-                                                    },
-                                                    "quantity": {
-                                                        "type": "integer",
-                                                        "example": 2
-                                                    },
-                                                    "data_update": {
-                                                        "type": "string",
-                                                        "example": "2021-03-28 20:54:00"
-                                                    },
-                                                    "name": {
-                                                        "type": "string",
-                                                        "example": "keyboard"
-                                                    },
-                                                    "price": {
-                                                        "type": "integer",
-                                                        "example": 250
-                                                    }
-                                                },
-                                                "type": "object",
-                                                "format": "query"
-                                            }
+                                        "id": {
+                                            "type": "integer",
+                                            "example": 2
+                                        },
+                                        "id_orders": {
+                                            "type": "integer",
+                                            "example": 444
+                                        },
+                                        "id_goods": {
+                                            "type": "integer",
+                                            "example": 311
+                                        },
+                                        "quantity": {
+                                            "type": "integer",
+                                            "example": 2
+                                        },
+                                        "data_update": {
+                                            "type": "string",
+                                            "example": "2021-03-28 20:54:00"
+                                        },
+                                        "name": {
+                                            "type": "string",
+                                            "example": "keyboard"
+                                        },
+                                        "price": {
+                                            "type": "integer",
+                                            "example": 250
                                         }
                                     },
                                     "type": "object"
@@ -183,26 +134,17 @@
                             "application/json": {
                                 "schema": {
                                     "properties": {
-                                        "data": {
-                                            "type": "array",
-                                            "items": {
-                                                "properties": {
-                                                    "id": {
-                                                        "type": "integer",
-                                                        "example": 1
-                                                    },
-                                                    "status_payment": {
-                                                        "type": "integer",
-                                                        "example": 1
-                                                    },
-                                                    "data_update": {
-                                                        "type": "string",
-                                                        "example": "2021-03-28 20:54:00"
-                                                    }
-                                                },
-                                                "type": "object",
-                                                "format": "query"
-                                            }
+                                        "id": {
+                                            "type": "integer",
+                                            "example": 1
+                                        },
+                                        "status_payment": {
+                                            "type": "integer",
+                                            "example": 1
+                                        },
+                                        "data_update": {
+                                            "type": "string",
+                                            "example": "2021-03-28 20:54:00"
                                         }
                                     },
                                     "type": "object"

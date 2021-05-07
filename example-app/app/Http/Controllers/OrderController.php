@@ -18,20 +18,16 @@ class OrderController extends Controller
      *     @OA\Response(
      *        response="200",
      *        description="Successful response",
-     *       @OA\JsonContent(
-     *          @OA\Property(
-     *           property="data",
-     *           type="array",
-     *           @OA\Items(
+     *      @OA\MediaType(
+     *           mediaType="application/json",
+     *           @OA\Schema(
      *               type="object",
-     *               format="query",
      *               @OA\Property(property="id", type="integer", example=4),
      *               @OA\Property(property="name_contragents", type="string", example="test"),
      *               @OA\Property(property="allsum", type="integer", example=600)
-     *              ),
-     *          ),
+     *          )
      *      )
-     *   ),
+     *    )
      * )
      */
     public function sumOfAllOrders()
@@ -51,13 +47,10 @@ class OrderController extends Controller
      *     @OA\Response(
      *        response="200",
      *        description="Successful response",
-     *        @OA\JsonContent(
-     *          @OA\Property(
-     *           property="data",
-     *           type="array",
-     *           @OA\Items(
+     *        @OA\MediaType(
+     *          mediaType="application/json",
+     *           @OA\Schema(
      *               type="object",
-     *               format="query",
      *               @OA\Property(property="id", type="integer", example=2),
      *               @OA\Property(property="id_orders", type="integer", example=444),
      *               @OA\Property(property="id_goods", type="integer", example=311),
@@ -67,7 +60,6 @@ class OrderController extends Controller
      *               @OA\Property(property="price", type="integer", example=250)
      *              ),
      *          ),
-     *      )
      *   ),
      * )
      */
